@@ -1,0 +1,24 @@
+{
+  "name": "smarrtcalc",
+  "version": "1.0.0",
+  "description": "This is the repository for our school project SmarrtCalc. The project includes a calculator application that allows you to perform basic mathematical calculations and convert various units.",
+  "main": "index.js",
+  "scripts": {
+  "scss": "sass src/scss/main.scss public/css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VadymPopoilyk/smartCalc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/VadymPopoilyk/smartCalc/issues"
+  },
+  "homepage": "https://github.com/VadymPopoilyk/smartCalc#readme",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}
