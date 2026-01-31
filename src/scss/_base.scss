@@ -1,4 +1,15 @@
+@use "variables" as *;
+
 body{
     margin: 0;
-    background: $very-dark-color;
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-screen{
+    width: 390px;
+    height: 844px;
+    background-color: white;
 }
