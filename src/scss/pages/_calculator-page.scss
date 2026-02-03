@@ -1,0 +1,33 @@
+@use "../variables" as *;
+
+.basic-extended-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+
+    .basic-btn, .extended-btn{
+        width: 165px;
+        height: 40px;
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: white;
+        background-color: $grey-color;
+        border: 0;
+    }
+
+    .basic-btn{
+        border-radius: 7px 0 0 7px;
+    }
+
+    .extended-btn{
+        border-radius: 0 7px 7px 0;
+    }
+
+    .active{
+        background-color: $orange-color;
+    }
+}
+
+
