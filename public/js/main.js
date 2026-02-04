@@ -1,7 +1,8 @@
 console.log("JS works");
 
 import './partials.js';
-import './navigations.js'
+import './navigations.js';
+import './function-pages.js';
 
 import { initLayout } from './partials.js';
 import { initNavigation } from './navigations.js';
