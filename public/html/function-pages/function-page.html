@@ -10,11 +10,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/826814e4d5.js" crossorigin="anonymous"></script>
 </head>
-<body data-page="function-page" data-title="Funkcja">
+<body data-page="function-page" data-title="Funkcja kwadratowa">
         <div class="phone-screen">
         <div id="header"></div>
         <main>
-            <p>Funkcja</p>
+            <div class="container">
+                <h2>f(x) = ax<sup>2</sup> + bx + c</h2>
+
+                <div class="form-container-a">
+                    <label for="a">a</label>
+                    <input type="text" id="a" placeholder="podaj a" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                </div>
+
+                <div class="form-container-b">
+                    <label for="b">b</label>
+                    <input type="text" id="b" placeholder="podaj b" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                </div>
+
+                <div class="form-container-c">
+                    <label for="c">c</label>
+                    <input type="text" id="c" placeholder="podaj c" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                </div>
+
+                <button id="calculate">Obliczyć</button>
+
+                <div id="calculate-result-one">
+
+                    <div class="form-result-x-less-zero">
+                        <label class="form-result-x-less-zero" for="x-less-zero">Δ < 0</label>
+                    </div> 
+
+                    <div class="form-result-x0 ">
+                        <label for="x-zero">x₀</label>
+                        <input type="text" id="zero" oninput="this.value = this.value.replace(/[^0-9]/g, '')" readonly>
+                    </div> 
+
+                    <div class="form-result-x1">
+                        <label for="x-one">x₁</label>
+                        <input type="text" id="one" oninput="this.value = this.value.replace(/[^0-9]/g, '')" readonly>
+                    </div>
+
+                    <div class="form-result-x2">
+                        <label for="x-two">x₂</label>
+                        <input type="text" id="two" oninput="this.value = this.value.replace(/[^0-9]/g, '')" readonly>
+                    </div> 
+
+                </div>
+
+            </div>
+
         </main>          
         <div id="footer"></div>
         </div>

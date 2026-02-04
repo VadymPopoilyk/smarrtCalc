@@ -1,0 +1,133 @@
+@use "../variables" as *;
+
+.container{
+    h2{
+        color: $white-color;
+        text-align: center;
+    }
+    
+    .form-container-a{
+        display: flex;
+        align-items: stretch;
+        margin: 0 auto;
+        width: fit-content;
+        margin-bottom: 12px;
+    }
+    label{
+        background-color: $light-black-color;
+        color: $white-color;
+        padding: 8px;
+        border-radius: 5px 0 0 5px;
+    }
+    #a{
+        border: none;
+        background-color: $grey-color;
+        color: $white-color;
+        padding: 8px;
+        width: 250px;
+        border-radius: 0 5px 5px 0;
+    }
+    .form-container-b{
+        display: flex;
+        align-items: stretch;
+        margin: 0 auto;
+        width: fit-content;
+        margin-bottom: 12px;
+    }
+    #b{
+        border: none;
+        background-color: $grey-color;
+        color: $white-color;
+        padding: 8px;
+        width: 250px;
+        border-radius: 0 5px 5px 0;
+    }
+    .form-container-c{
+        display: flex;
+        align-items: stretch;
+        margin: 0 auto;
+        width: fit-content;
+        margin-bottom: 20px;
+    }
+    #c{
+        border: none;
+        background-color: $grey-color;
+        color: $white-color;
+        padding: 8px;
+        width: 250px;
+        border-radius: 0 5px 5px 0;
+    }
+    button{
+        display: flex;
+        margin: 0 auto;
+        color: $white-color;
+        background-color: $grey-color;
+        cursor: pointer;
+        border: none;
+        padding: 8px;
+        border-radius: 5px;
+        padding-left: 25px ;
+        padding-right:25px ;
+        margin-bottom: 20px;
+    }
+
+     .form-result-x-less-zero{
+        margin: 0 auto;
+        width: fit-content;
+        margin-top: 50px;
+        display: none;
+        background-color: $red-color;
+        color: $white-color;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .form-result-x0{
+        display: flex;
+        align-items: stretch;
+        margin: 0 auto;
+        width: fit-content;
+        margin-bottom: 20px;
+        display: none;
+    }
+    #zero{
+        border: none;
+        background-color: $light-grey-color;
+        color: $white-color;
+        padding: 8px;
+        width: 250px;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .form-result-x1{
+        display: flex;
+        align-items: stretch;
+        margin: 0 auto;
+        width: fit-content;
+        margin-bottom: 12px;
+    }
+    #one{
+        border: none;
+        background-color: $light-grey-color;
+        color: $white-color;
+        padding: 8px;
+        width: 250px;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .form-result-x2{
+        display: flex;
+        align-items: stretch;
+        margin: 0 auto;
+        width: fit-content;
+        margin-bottom: 20px;
+    }
+    #two{
+        border: none;
+        background-color: $light-grey-color;
+        color: $white-color;
+        padding: 8px;
+        width: 250px;
+        border-radius: 0 5px 5px 0;
+    }
+}
+
