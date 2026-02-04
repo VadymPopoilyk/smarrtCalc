@@ -10,20 +10,20 @@ function setMode(activeBtn, inactiveBtn, showEl, hideEl) {
 // basic/extended calculator
 
 export function initCalculatorMode() {
-  const basicBtn = document.querySelector('.basic-btn');
-  const extendedBtn = document.querySelector('.extended-btn');
+  const navBasicBtn = document.querySelector('.nav-basic-btn');
+  const navExtendedBtn = document.querySelector('.nav-extended-btn');
 
-  if (!basicBtn || !extendedBtn) return;
+  if (!navBasicBtn || !navExtendedBtn) return;
 
   const calculatorBasic = document.querySelector('.calculator-basic');
   const calculatorExtended = document.querySelector('.calculator-extended');
 
-  basicBtn.addEventListener("click", () => {
-      setMode(basicBtn, extendedBtn, calculatorBasic, calculatorExtended);
+  navBasicBtn.addEventListener("click", () => {
+      setMode(navBasicBtn, navExtendedBtn, calculatorBasic, calculatorExtended);
   });
 
-  extendedBtn.addEventListener("click", () => {
-      setMode(extendedBtn, basicBtn, calculatorExtended);
+  navExtendedBtn.addEventListener("click", () => {
+      setMode(navExtendedBtn, navBasicBtn, calculatorExtended);
   });
 }
 
