@@ -19,6 +19,10 @@
             color: $white-color;
             font-size: 30px;
             text-decoration: none;
+            transition: 0.3s;
+        }
+        a:hover{
+            background-color: $grey-color;
         }
         p{
             font-size: 15px;

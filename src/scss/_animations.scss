@@ -1,0 +1,11 @@
+@use "variables" as *;
+
+@keyframes bg-color {
+    from {background-color: $grey-color};
+    to {background-color: $orange-color;}
+}
+
+@keyframes opacity {
+    from {opacity: 30%;}
+    to {opacity: 100%;}
+}
