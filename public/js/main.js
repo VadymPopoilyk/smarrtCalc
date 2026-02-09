@@ -9,6 +9,8 @@ import './calculator-page/ui.js';
 import './calculator-page/handlers.js';
 import './calculator-page/events.js';
 import './calculator-page/normalizer.js';
+import './function-page.js';
+import './converter-dlugosc.js';
 
 import { initLayout } from './partials.js';
 import { initNavigation } from './navigations.js';

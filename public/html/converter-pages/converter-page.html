@@ -14,10 +14,33 @@
         <div class="phone-screen">
         <div id="header"></div>
         <main>
-            <p>Konwerter</p>
+            <section class="converter_length">
+             <section class="converter">
+                 <div class="field">
+                     <select id="from_unit">
+                     </select>
+                     <input type="text" id="number_start" class="numbers" placeholder="..." >
+                 </div>
+
+                 <div class="field">
+                     <select id="to_unit">
+                     </select>
+                     <input type="text" id="number_end" class="numbers" readonly>
+                 </div>
+             </section>
+            
+             <section class="categories">
+                 <button class="active">Długość</button>
+                 <button class="wide">Masa</button>
+                 <button class="wide">Informacja</button>
+                 <button class="wide">Waluta</button>
+                 <button class="wide" id="date">Data</button>
+             </section>
+            </section>
         </main>          
         <div id="footer"></div>
         </div>
-    <script type="module" src="../../js/main.js"></script>
+        <script type="module" src="../../js/main.js"></script>
+    <script src="../../js/converter-dlugosc.js" defer></script>
 </body>
 </html>

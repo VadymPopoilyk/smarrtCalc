@@ -19,41 +19,43 @@
 
                 <div class="form-container-a">
                     <label for="a">a</label>
-                    <input type="text" id="a" placeholder="podaj a" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <input type="text" id="a" class="numbers" placeholder="podaj a" >
                 </div>
 
                 <div class="form-container-b">
                     <label for="b">b</label>
-                    <input type="text" id="b" placeholder="podaj b" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <input type="text" id="b" class="numbers" placeholder="podaj b" >
                 </div>
 
                 <div class="form-container-c">
                     <label for="c">c</label>
-                    <input type="text" id="c" placeholder="podaj c" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <input type="text" id="c" class="numbers" placeholder="podaj c" >
                 </div>
 
                 <button id="calculate">Obliczyć</button>
 
                 <div id="calculate-result-one">
 
-                    <div class="form-result-x-less-zero">
-                        <label class="form-result-x-less-zero" for="x-less-zero">Δ < 0</label>
-                    </div> 
+                    <section class="form-result-x-less-zero">
+                        <label class="lessZero" for="x-less-zero">Δ < 0</label>
+                    </section> 
 
-                    <div class="form-result-x0 ">
+                    <section class="form-result-x0 ">
                         <label for="x-zero">x₀</label>
-                        <input type="text" id="zero" oninput="this.value = this.value.replace(/[^0-9]/g, '')" readonly>
-                    </div> 
+                        <input type="text" id="zero" class="numbers" readonly>
+                    </section> 
+                    
+                    <section class="form-result-x1-x2">
+                     <div class="form-result-x1">
+                         <label for="x-one">x₁</label>
+                         <input type="text" id="one" class="numbers" readonly>
+                     </div>
 
-                    <div class="form-result-x1">
-                        <label for="x-one">x₁</label>
-                        <input type="text" id="one" oninput="this.value = this.value.replace(/[^0-9]/g, '')" readonly>
-                    </div>
-
-                    <div class="form-result-x2">
-                        <label for="x-two">x₂</label>
-                        <input type="text" id="two" oninput="this.value = this.value.replace(/[^0-9]/g, '')" readonly>
-                    </div> 
+                     <div class="form-result-x2">
+                         <label for="x-two">x₂</label>
+                         <input type="text" id="two" class="numbers" readonly>
+                     </div> 
+                    </section>
 
                 </div>
 
@@ -63,5 +65,6 @@
         <div id="footer"></div>
         </div>
     <script type="module" src="../../js/main.js"></script>
+    <script src="../../js/function-pages.js"></script>
 </body>
 </html>

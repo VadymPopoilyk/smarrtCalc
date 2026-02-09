@@ -5,6 +5,13 @@
         color: $white-color;
         text-align: center;
     }
+
+    input{
+        text-align: right;
+    }
+    input::placeholder{
+        font-size: 18px;
+    }
     
     .form-container-a{
         display: flex;
@@ -12,11 +19,12 @@
         margin: 0 auto;
         width: fit-content;
         margin-bottom: 12px;
+        font-size: 18px;
     }
     label{
         background-color: $light-black-color;
         color: $white-color;
-        padding: 8px;
+        padding: 15px;
         border-radius: 5px 0 0 5px;
     }
     #a{
@@ -24,7 +32,8 @@
         background-color: $grey-color;
         color: $white-color;
         padding: 8px;
-        width: 250px;
+        width: 270px;
+        height: 35px;
         border-radius: 0 5px 5px 0;
     }
     .form-container-b{
@@ -33,13 +42,15 @@
         margin: 0 auto;
         width: fit-content;
         margin-bottom: 12px;
+        font-size: 18px;
     }
     #b{
         border: none;
         background-color: $grey-color;
         color: $white-color;
         padding: 8px;
-        width: 250px;
+        width: 270px;
+        height: 35px;
         border-radius: 0 5px 5px 0;
     }
     .form-container-c{
@@ -48,13 +59,15 @@
         margin: 0 auto;
         width: fit-content;
         margin-bottom: 20px;
+        font-size: 18px;
     }
     #c{
         border: none;
         background-color: $grey-color;
         color: $white-color;
         padding: 8px;
-        width: 250px;
+        width: 270px;
+        height: 35px;
         border-radius: 0 5px 5px 0;
     }
     button{
@@ -64,11 +77,13 @@
         background-color: $grey-color;
         cursor: pointer;
         border: none;
-        padding: 8px;
+        padding: 15px;
         border-radius: 5px;
-        padding-left: 25px ;
-        padding-right:25px ;
+        padding-left: 40px ;
         margin-bottom: 20px;
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
     }
 
      .form-result-x-less-zero{
@@ -79,7 +94,14 @@
         background-color: $red-color;
         color: $white-color;
         border-radius: 5px 5px 5px 5px;
+        font-size: 18px;
     }
+
+     .lessZero{
+        background-color: $red-color;
+        color: $white-color;
+        border-radius: 5px;
+     }
 
     .form-result-x0{
         display: flex;
@@ -88,13 +110,15 @@
         width: fit-content;
         margin-bottom: 20px;
         display: none;
+        font-size: 18px;
     }
     #zero{
         border: none;
         background-color: $light-grey-color;
         color: $white-color;
         padding: 8px;
-        width: 250px;
+        width: 270px;
+        height: 35px;
         border-radius: 0 5px 5px 0;
     }
 
@@ -104,13 +128,15 @@
         margin: 0 auto;
         width: fit-content;
         margin-bottom: 12px;
+        font-size: 18px;
     }
     #one{
         border: none;
         background-color: $light-grey-color;
         color: $white-color;
         padding: 8px;
-        width: 250px;
+        width: 270px;
+        height: 35px;
         border-radius: 0 5px 5px 0;
     }
 
@@ -120,14 +146,21 @@
         margin: 0 auto;
         width: fit-content;
         margin-bottom: 20px;
+        font-size: 18px;
     }
     #two{
         border: none;
         background-color: $light-grey-color;
         color: $white-color;
         padding: 8px;
-        width: 250px;
+        width: 270px;
+        height: 35px;
         border-radius: 0 5px 5px 0;
     }
+    .form-result-x1-x2{
+        display: none;
+        flex-direction: column;
+    }
+
 }
 
