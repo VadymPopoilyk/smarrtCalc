@@ -3,6 +3,7 @@ console.log("JS works");
 import './partials.js';
 import './navigations.js';
 import './function-pages.js';
+import './converter-dlugosc.js';
 
 import { initLayout } from './partials.js';
 import { initNavigation } from './navigations.js';
