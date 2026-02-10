@@ -19,11 +19,38 @@ export function initCalculatorMode() {
   const calculatorExtended = document.querySelector('.calculator-extended');
 
   navBasicBtn.addEventListener("click", () => {
-      setMode(navBasicBtn, navExtendedBtn, calculatorBasic, calculatorExtended);
+    setMode(navBasicBtn, navExtendedBtn, calculatorBasic, calculatorExtended);
   });
 
   navExtendedBtn.addEventListener("click", () => {
-      setMode(navExtendedBtn, navBasicBtn, calculatorExtended);
+    setMode(navExtendedBtn, navBasicBtn, calculatorExtended);
+  });
+}
+
+//converter-page nav
+
+export function converterNav() {
+  const buttons = document.querySelectorAll('.converter-btn');
+  const sections = document.querySelectorAll('.converter-section');
+
+  if (!buttons.length || !sections.length) return;
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.target;
+
+      // active кнопки
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // показ секцій
+      sections.forEach(section => {
+        section.classList.toggle(
+          'hidden',
+          section.dataset.section !== target
+        );
+      });
+    });
   });
 }
 

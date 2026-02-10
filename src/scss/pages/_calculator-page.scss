@@ -28,7 +28,11 @@
     font-size: 20px;
     letter-spacing: 1px;
     background-color: $grey-color;
+    transition: 0.2s;
   }
+  :hover{
+      background-color: $light-black-color;
+    }
 
   .nav-basic-btn {
     border-radius: 7px 0 0 7px;
@@ -42,6 +46,9 @@
     background-color: $orange-color;
     animation-name: bg-color;
     animation-duration: 0.5s;
+  }
+  .active:hover{
+    background-color: $dark-orange-color;
   }
 }
 
@@ -123,13 +130,10 @@
         padding-bottom: 10px;
         grid-row: span 2;
         background-color: $orange-color;
-        :hover{
+      }
+      .big-bg-orange:hover{
           background-color: $dark-orange-color;
         }
-        :active{
-          transform: scale(0.9);
-        }
-      }
       
 
       .font-orange {

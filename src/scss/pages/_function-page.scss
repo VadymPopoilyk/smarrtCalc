@@ -6,14 +6,7 @@
         text-align: center;
     }
 
-    input{
-        text-align: right;
-    }
-    input::placeholder{
-        font-size: 18px;
-    }
-    
-    .form-container-a{
+    .form-container{
         display: flex;
         align-items: stretch;
         margin: 0 auto;
@@ -27,7 +20,8 @@
         padding: 15px;
         border-radius: 5px 0 0 5px;
     }
-    #a{
+    input{
+        text-align: right;
         border: none;
         background-color: $grey-color;
         color: $white-color;
@@ -35,42 +29,10 @@
         width: 270px;
         height: 35px;
         border-radius: 0 5px 5px 0;
-    }
-    .form-container-b{
-        display: flex;
-        align-items: stretch;
-        margin: 0 auto;
-        width: fit-content;
-        margin-bottom: 12px;
         font-size: 18px;
     }
-    #b{
-        border: none;
-        background-color: $grey-color;
-        color: $white-color;
-        padding: 8px;
-        width: 270px;
-        height: 35px;
-        border-radius: 0 5px 5px 0;
-    }
-    .form-container-c{
-        display: flex;
-        align-items: stretch;
-        margin: 0 auto;
-        width: fit-content;
-        margin-bottom: 20px;
-        font-size: 18px;
-    }
-    #c{
-        border: none;
-        background-color: $grey-color;
-        color: $white-color;
-        padding: 8px;
-        width: 270px;
-        height: 35px;
-        border-radius: 0 5px 5px 0;
-    }
-    button{
+
+    #calculate, .clear-btn{
         display: flex;
         margin: 0 auto;
         color: $white-color;
@@ -79,11 +41,34 @@
         border: none;
         padding: 15px;
         border-radius: 5px;
-        padding-left: 40px ;
+        font-size: 18px;
         margin-bottom: 20px;
+        transition: 0.3s;
+    }
+
+    #calculate:hover, .clear-btn:hover{
+        background-color: $light-black-color;
+    }
+    #calculate{
+        padding-left: 40px;
         width: 150px;
         height: 50px;
         font-size: 18px;
+    }
+    
+
+    .delta-result{
+        display: none;
+        margin: auto;
+        width: fit-content;
+        align-items: stretch;
+        color: $white-color;
+        margin-bottom: 10px;
+        
+        #delta-input{
+            width: 50px;
+            background-color: $light-grey-color;
+        }
     }
 
      .form-result-x-less-zero{

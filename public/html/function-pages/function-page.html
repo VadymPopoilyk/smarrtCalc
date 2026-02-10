@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,64 +8,77 @@
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/826814e4d5.js" crossorigin="anonymous"></script>
 </head>
+
 <body data-page="function-page" data-title="Funkcja kwadratowa">
-        <div class="phone-screen">
+    <div class="phone-screen">
         <div id="header"></div>
         <main>
             <div class="container">
                 <h2>f(x) = ax<sup>2</sup> + bx + c</h2>
 
-                <div class="form-container-a">
-                    <label for="a">a</label>
-                    <input type="text" id="a" class="numbers" placeholder="podaj a" >
+                <div class="inputs">
+                    <div class="form-container form-container-a">
+                        <label for="a">a</label>
+                        <input type="text" id="a" class="numbers" placeholder="podaj a">
+                    </div>
+
+                    <div class="form-container form-container-b">
+                        <label for="b">b</label>
+                        <input type="text" id="b" class="numbers" placeholder="podaj b">
+                    </div>
+
+                    <div class="form-container form-container-c">
+                        <label for="c">c</label>
+                        <input type="text" id="c" class="numbers" placeholder="podaj c">
+                    </div>
+
+                    <button class="clear-btn">Wyczyść Wszystko</button>
                 </div>
 
-                <div class="form-container-b">
-                    <label for="b">b</label>
-                    <input type="text" id="b" class="numbers" placeholder="podaj b" >
-                </div>
-
-                <div class="form-container-c">
-                    <label for="c">c</label>
-                    <input type="text" id="c" class="numbers" placeholder="podaj c" >
-                </div>
 
                 <button id="calculate">Obliczyć</button>
 
                 <div id="calculate-result-one">
 
+                    <section class="delta-result">
+                        <label for="delta">Δ</label>
+                        <input type="text" id="delta-input" class="numbers" readonly>
+                    </section>
+
                     <section class="form-result-x-less-zero">
                         <label class="lessZero" for="x-less-zero">Δ < 0</label>
-                    </section> 
+                    </section>
 
-                    <section class="form-result-x0 ">
+                    <section class="form-result-x0">
                         <label for="x-zero">x₀</label>
                         <input type="text" id="zero" class="numbers" readonly>
-                    </section> 
-                    
-                    <section class="form-result-x1-x2">
-                     <div class="form-result-x1">
-                         <label for="x-one">x₁</label>
-                         <input type="text" id="one" class="numbers" readonly>
-                     </div>
+                    </section>
 
-                     <div class="form-result-x2">
-                         <label for="x-two">x₂</label>
-                         <input type="text" id="two" class="numbers" readonly>
-                     </div> 
+                    <section class="form-result-x1-x2">
+                        <div class="form-result-x1">
+                            <label for="x-one">x₁</label>
+                            <input type="text" id="one" class="numbers" readonly>
+                        </div>
+
+                        <div class="form-result-x2">
+                            <label for="x-two">x₂</label>
+                            <input type="text" id="two" class="numbers" readonly>
+                        </div>
                     </section>
 
                 </div>
 
+
             </div>
 
-        </main>          
+        </main>
         <div id="footer"></div>
-        </div>
+    </div>
     <script type="module" src="../../js/main.js"></script>
-    <script src="../../js/function-pages.js"></script>
 </body>
+
 </html>

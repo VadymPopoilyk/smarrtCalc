@@ -14,33 +14,46 @@
         <div class="phone-screen">
         <div id="header"></div>
         <main>
-            <section class="converter_length">
-             <section class="converter">
-                 <div class="field">
-                     <select id="from_unit">
-                     </select>
-                     <input type="text" id="number_start" class="numbers" placeholder="..." >
-                 </div>
+            <section class="converters">
+                <section class="converter-section converter-length" data-section="length">
+                    <div class="field">
+                        <select id="from_unit"></select>
+                        <input type="text" id="number_start" class="numbers" placeholder="..." >
+                    </div>
+                    <div class="field">
+                        <select id="to_unit"></select>
+                        <input type="text" id="number_end" class="numbers" readonly>
+                    </div>
+                </section>
 
-                 <div class="field">
-                     <select id="to_unit">
-                     </select>
-                     <input type="text" id="number_end" class="numbers" readonly>
-                 </div>
-             </section>
-            
-             <section class="categories">
-                 <button class="active">Długość</button>
-                 <button class="wide">Masa</button>
-                 <button class="wide">Informacja</button>
-                 <button class="wide">Waluta</button>
-                 <button class="wide" id="date">Data</button>
-             </section>
+                <section class="converter-section converter-mass hidden" data-section="mass">
+                    masa
+                </section>
+
+                <section class="converter-section converter-memory hidden" data-section="memory">
+                    pamieć
+                </section>
+
+                <section class="converter-section converter-currency hidden" data-section="currency">
+                    waluta
+                </section>
+
+                <section class="converter-section converter-date hidden" data-section="date">
+                    data
+                </section>
             </section>
-        </main>          
+            
+
+            <section class="categories">
+                 <button class="converter-btn active" data-target="length">Długość</button>
+                 <button class="converter-btn" data-target="mass">Masa</button>
+                 <button class="converter-btn" data-target="memory">Pamięć</button>
+                 <button class="converter-btn" data-target="currency">Waluta</button>
+                 <button class="converter-btn date-btn" data-target="date">Data</button>
+             </section>
+        </main>   
         <div id="footer"></div>
         </div>
         <script type="module" src="../../js/main.js"></script>
-    <script src="../../js/converter-dlugosc.js" defer></script>
 </body>
 </html>
