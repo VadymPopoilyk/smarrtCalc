@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,24 @@
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/826814e4d5.js" crossorigin="anonymous"></script>
 </head>
+
 <body data-page="converter-page" data-title="Konwerter">
-        <div class="phone-screen">
+    <div class="phone-screen">
         <div id="header"></div>
         <main>
             <section class="converters">
                 <section class="converter-section converter-length" data-section="length">
                     <div class="field">
                         <select id="from_unit"></select>
-                        <input type="text" id="number_start" class="numbers" placeholder="..." >
+                        <input type="text" id="number_start" class="numbers converter" placeholder="|" autocomplete="off">
                     </div>
                     <div class="field">
                         <select id="to_unit"></select>
-                        <input type="text" id="number_end" class="numbers" readonly>
+                        <input type="text" id="number_end" class="numbers" disabled>
                     </div>
                 </section>
 
@@ -39,21 +42,74 @@
                 </section>
 
                 <section class="converter-section converter-date hidden" data-section="date">
-                    data
+                    <div class="date-input">
+                        <span class="label">OD</span>
+
+                        <div class="date-fields">
+                            <input type="text" class="date-part from day" placeholder="DD" maxlength="2" inputmode="numeric">
+                            <span class="slash">/</span>
+                            <input type="text" class="date-part from month" placeholder="MM" maxlength="2" inputmode="numeric">
+                            <span class="slash">/</span>
+                            <input type="text" class="date-part from year" placeholder="YYYY" maxlength="4" inputmode="numeric">
+                        </div>
+
+                        <button class="calendar-btn" type="button">
+                            <i class="fa-regular fa-calendar calendar-icon"></i>
+                        </button>
+                        <input type="date" class="native-date hidden">
+                    </div>
+
+                    <div class="date-input">
+                        <span class="label">DO</span>
+
+                        <div class="date-fields">
+                            <input type="text" class="date-part till day" placeholder="DD" maxlength="2" inputmode="numeric">
+                            <span class="slash">/</span>
+                            <input type="text" class="date-part till month" placeholder="MM" maxlength="2" inputmode="numeric">
+                            <span class="slash">/</span>
+                            <input type="text" class="date-part till year" placeholder="YYYY" maxlength="4" inputmode="numeric">
+                        </div>
+
+                        <button class="calendar-btn" type="button">
+                            <i class="fa-regular fa-calendar calendar-icon"></i>
+                        </button>
+                        <input type="date" class="native-date hidden">
+                    </div>
+
+                    <div class="date-btns">
+                        <button class="date-btn submit-btn" type="button">Pokaż</button>
+                        <button class="date-btn clear-btn" type="button">Wyczyść wszystko</button>
+                    </div>
+
+                    <div class="date-outputs">
+                        <div class="output-div">
+                            <span class="label">Y</span>
+                            <input type="text" class="output  year" disabled>
+                        </div>
+                        <div class="output-div">
+                            <span class="label">M</span>
+                            <input type="text" class="output month" disabled>
+                        </div>
+                        <div class="output-div">
+                            <span class="label">D</span>
+                            <input type="text" class="output day" disabled>
+                        </div>
+                    </div>
                 </section>
             </section>
-            
+
 
             <section class="categories">
-                 <button class="converter-btn active" data-target="length">Długość</button>
-                 <button class="converter-btn" data-target="mass">Masa</button>
-                 <button class="converter-btn" data-target="memory">Pamięć</button>
-                 <button class="converter-btn" data-target="currency">Waluta</button>
-                 <button class="converter-btn date-btn" data-target="date">Data</button>
-             </section>
-        </main>   
+                <button class="converter-btn active" data-target="length">Długość</button>
+                <button class="converter-btn" data-target="mass">Masa</button>
+                <button class="converter-btn" data-target="memory">Pamięć</button>
+                <button class="converter-btn" data-target="currency">Waluta</button>
+                <button class="converter-btn date-btn" data-target="date">Data</button>
+            </section>
+        </main>
         <div id="footer"></div>
-        </div>
-        <script type="module" src="../../js/main.js"></script>
+    </div>
+    <script type="module" src="../../js/main.js"></script>
 </body>
+
 </html>

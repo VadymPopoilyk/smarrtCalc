@@ -9,3 +9,34 @@ function normalizeUnaryMinus(expr) {
 
     return expr;
 }
+
+function normalizePercent(expr) {
+    // 180-50% → 180-(180*50/100)
+    expr = expr.replace(
+        /(\d+\.?\d*)\s*-\s*(\d+\.?\d*)%/g,
+        '($1-($1*$2/100))'
+    );
+
+    // 180+50%
+    expr = expr.replace(
+        /(\d+\.?\d*)\s*\+\s*(\d+\.?\d*)%/g,
+        '($1+($1*$2/100))'
+    );
+
+    // 180*50%
+    expr = expr.replace(
+        /(\d+\.?\d*)\s*\*\s*(\d+\.?\d*)%/g,
+        '($1*($2/100))'
+    );
+
+    // 180/50%
+    expr = expr.replace(
+        /(\d+\.?\d*)\s*\/\s*(\d+\.?\d*)%/g,
+        '($1/($2/100))'
+    );
+
+    // %
+    expr = expr.replace(/(\d+\.?\d*)%/g, '($1/100)');
+
+    return expr;
+}

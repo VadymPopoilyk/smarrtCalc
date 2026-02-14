@@ -19,6 +19,7 @@ body {
     height: 630px;
     display: flow-root;
     background-color: $dark-grey-color;
+    overflow-y: auto;
   }
 }
 

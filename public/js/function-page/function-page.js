@@ -1,7 +1,20 @@
-document.querySelectorAll('.numbers').forEach(input => {
-    input.addEventListener('input', e => {
-        e.target.value = e.target.value.replace(/[^0-9]/g, '');
-    });
+document.querySelectorAll('.numbers.function').forEach(input => {
+  input.addEventListener('input', e => {
+    let v = e.target.value;
+
+    v = v.replace(/[^0-9.,-]/g, '');
+
+    v = v.replace(/,/g, '.');
+
+    v = v.replace(/(?!^)-/g, '');
+
+    const parts = v.split('.');
+    if (parts.length > 2) {
+      v = parts[0] + '.' + parts.slice(1).join('');
+    }
+
+    e.target.value = v;
+  });
 });
 
 const aInput = document.getElementById('a');
@@ -59,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formResultX0.style.display = 'none';
         formResultX1X2.style.display = 'none';
 
-        const delta = b * b - 4 * a * c;
+        const delta = (b) * (b) - 4 * (a) * (c);
 
         deltaInput.value = delta;
 
@@ -69,11 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        else if (Math.abs(delta) < 0.0001) {
+        else if (Math.abs(delta) < 0.0000000001) {
             x0Input.value = (-b / (2 * a)).toFixed(2);
             formResultX0.style.display = 'flex';
             formDeltaResult.style.display = 'flex';
-            
+
             if (x0Input.value === 'NaN') {
                 x0Input.value = 'n/a';
                 deltaInput.value = 'n/a';

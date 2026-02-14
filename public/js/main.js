@@ -18,6 +18,10 @@ import './calculator-page/normalizer.js';
 //converter-page
 import './converter-page/converter-length.js';
 
+import './converter-page/converter-date/converter-date-main.js';
+import './converter-page/converter-date/converter-date-validator.js';
+
+
 import { initLayout } from './partials.js';
 import { initNavigation } from './navigations.js';
 import { initCalculatorMode } from './navigations.js';
