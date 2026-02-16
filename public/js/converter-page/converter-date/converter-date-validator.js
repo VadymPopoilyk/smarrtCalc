@@ -48,7 +48,7 @@ export function validateBlock(block) {
   if (!(day && month && year)) return true;
 
   if (!isValidDate(day, month, year)) {
-    [d, m, y].forEach(i => i.classList.add('date-error'));
+    [d, m, y].forEach(i => i.classList.add('text-error'));
     return false;
   }
 
@@ -56,7 +56,7 @@ export function validateBlock(block) {
   d.value = format2(day);
   m.value = format2(month);
 
-  [d, m, y].forEach(i => i.classList.remove('date-error'));
+  [d, m, y].forEach(i => i.classList.remove('text-error'));
   return true;
 }
 
@@ -79,11 +79,11 @@ export function validateRange(fromBlock, tillBlock) {
   const tillDate = toDate(td, tm, ty);
 
   if (fromDate > tillDate) {
-    [fromBlock, tillBlock].forEach(b => b.classList.add('error'));
+    [fromBlock, tillBlock].forEach(b => b.classList.add('box-error'));
     return false;
   }
 
-  [fromBlock, tillBlock].forEach(b => b.classList.remove('error'));
+  [fromBlock, tillBlock].forEach(b => b.classList.remove('box-error'));
   return true;
 }
 

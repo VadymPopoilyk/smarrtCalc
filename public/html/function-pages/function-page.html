@@ -17,65 +17,62 @@
     <div class="phone-screen">
         <div id="header"></div>
         <main>
-            <div class="container">
-                <h2>f(x) = ax<sup>2</sup> + bx + c</h2>
+            <div class="function-main-div">
+                <h2>f(x) = ax² + bx + c</h2>
 
-                <div class="inputs">
-                    <div class="form-container form-container-a">
+                <div class="function-inputs">
+                    <div class="form-container box-shadow-animation">
                         <label for="a">a</label>
-                        <input type="text" id="a" class="numbers function" placeholder="podaj a">
+                        <input type="text" id="a" class="numbers function" placeholder="podaj a" autocomplete="off" inputmode="numeric">
                     </div>
 
-                    <div class="form-container form-container-b">
+                    <div class="form-container box-shadow-animation">
                         <label for="b">b</label>
-                        <input type="text" id="b" class="numbers function" placeholder="podaj b">
+                        <input type="text" id="b" class="numbers function" placeholder="podaj b" autocomplete="off" inputmode="numeric">
                     </div>
 
-                    <div class="form-container form-container-c">
+                    <div class="form-container box-shadow-animation">
                         <label for="c">c</label>
-                        <input type="text" id="c" class="numbers function" placeholder="podaj c">
+                        <input type="text" id="c" class="numbers function" placeholder="podaj c" autocomplete="off" inputmode="numeric">
                     </div>
-
-                    <button class="clear-btn">Wyczyść Wszystko</button>
                 </div>
 
-
-                <button id="calculate">Obliczyć</button>
-
-                <div id="calculate-result-one">
-
-                    <section class="delta-result">
-                        <label for="delta">Δ</label>
-                        <input type="text" id="delta-input" class="numbers" disabled>
+                <div class="function-btns">
+                    <button class="button clear-btn">Wyczyść Wszystko</button>
+                    <button class="button primary submit">Obliczyć</button>
+                </div>
+                
+                <div class="results">
+                    <section class="result-block delta-result hidden">
+                        <label>Δ</label>
+                        <input type="text" class="result-input" disabled>
                     </section>
 
-                    <section class="form-result-x-less-zero">
-                        <label class="lessZero" for="x-less-zero">Δ < 0</label>
+                    <section class="result-block result-error hidden">
+                        <label class="lessZero">Δ < 0</label>
                     </section>
 
-                    <section class="form-result-x0">
-                        <label for="x-zero">x₀</label>
-                        <input type="text" id="zero" class="numbers" disabled>
+                    <section class="result-block x0 hidden">
+                        <label>x₀</label>
+                        <input type="text" class="result-input" disabled>
                     </section>
 
-                    <section class="form-result-x1-x2">
-                        <div class="form-result-x1">
-                            <label for="x-one">x₁</label>
-                            <input type="text" id="one" class="numbers" disabled>
+                    <section class="result-group x1-x2">
+                        <div class="result-block x1 hidden">
+                            <label>x₁</label>
+                            <input type="text" class="result-input" disabled>
                         </div>
 
-                        <div class="form-result-x2">
-                            <label for="x-two">x₂</label>
-                            <input type="text" id="two" class="numbers" disabled>
+                        <div class="result-block x2 hidden">
+                            <label>x₂</label>
+                            <input type="text" class="result-input" disabled>
                         </div>
                     </section>
 
                 </div>
-
-
             </div>
-
         </main>
+
         <div id="footer"></div>
     </div>
     <script type="module" src="../../js/main.js"></script>

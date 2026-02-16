@@ -15,7 +15,7 @@ document.querySelectorAll('.numbers.converter').forEach(input => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+export function initConverterLength(){
     const inputStart = document.getElementById("number_start");
     const inputEnd = document.getElementById("number_end");
     const selectFrom = document.getElementById("from_unit");
@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
     selectTo.value = "m";
 
     function convert() {
-        function formatNumber(num, precision = 6) {
-            return Number(num.toFixed(precision));
+        function formatNumber(num, precision = 10) {
+             return Number(num.toPrecision(precision));
         }
 
         const rawValue = inputStart.value.replace(/[^\d.,]/g, '').replace(',', '.');
@@ -65,4 +65,4 @@ document.addEventListener("DOMContentLoaded", function () {
     inputStart.addEventListener("input", convert);
     selectFrom.addEventListener("change", convert);
     selectTo.addEventListener("change", convert);
-});
+};

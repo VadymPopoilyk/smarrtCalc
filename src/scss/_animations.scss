@@ -1,11 +1,46 @@
 @use "variables" as *;
 
 @keyframes bg-color {
-    from {background-color: $grey-color};
-    to {background-color: $orange-color;}
+    from {
+        background-color: $grey-color
+    }
+
+    ;
+
+    to {
+        background-color: $orange-color;
+    }
 }
 
 @keyframes opacity {
-    from {opacity: 30%;}
-    to {opacity: 100%;}
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.input-shadow-animation {
+    input {
+        transition: 0.3s;
+        outline: none;
+
+        &:focus {
+            box-shadow: 0 0 3px 1px $white-color;
+        }
+    }
+}
+
+.box-shadow-animation {
+    transition: 0.3s;
+
+    input {
+        outline: none;
+    }
+
+    &:focus-within {
+        box-shadow: 0 0 3px 1px $white-color;
+    }
 }

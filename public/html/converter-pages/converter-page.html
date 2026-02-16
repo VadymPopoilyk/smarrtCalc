@@ -19,9 +19,9 @@
         <main>
             <section class="converters">
                 <section class="converter-section converter-length" data-section="length">
-                    <div class="field">
+                    <div class="field box-shadow-animation">
                         <select id="from_unit"></select>
-                        <input type="text" id="number_start" class="numbers converter" placeholder="|" autocomplete="off">
+                        <input type="text" id="number_start" class="numbers converter" placeholder="..." autocomplete="off" inputmode="numeric">
                     </div>
                     <div class="field">
                         <select id="to_unit"></select>
@@ -42,10 +42,10 @@
                 </section>
 
                 <section class="converter-section converter-date hidden" data-section="date">
-                    <div class="date-input">
+                    <div class="date-input ">
                         <span class="label">OD</span>
 
-                        <div class="date-fields">
+                        <div class="date-fields input-shadow-animation">
                             <input type="text" class="date-part from day" placeholder="DD" maxlength="2" inputmode="numeric">
                             <span class="slash">/</span>
                             <input type="text" class="date-part from month" placeholder="MM" maxlength="2" inputmode="numeric">
@@ -53,16 +53,16 @@
                             <input type="text" class="date-part from year" placeholder="YYYY" maxlength="4" inputmode="numeric">
                         </div>
 
-                        <button class="calendar-btn" type="button">
+                        <button class="calendar-btn " type="button">
                             <i class="fa-regular fa-calendar calendar-icon"></i>
                         </button>
                         <input type="date" class="native-date hidden">
                     </div>
 
-                    <div class="date-input">
+                    <div class="date-input ">
                         <span class="label">DO</span>
 
-                        <div class="date-fields">
+                        <div class="date-fields input-shadow-animation">
                             <input type="text" class="date-part till day" placeholder="DD" maxlength="2" inputmode="numeric">
                             <span class="slash">/</span>
                             <input type="text" class="date-part till month" placeholder="MM" maxlength="2" inputmode="numeric">
@@ -70,14 +70,14 @@
                             <input type="text" class="date-part till year" placeholder="YYYY" maxlength="4" inputmode="numeric">
                         </div>
 
-                        <button class="calendar-btn" type="button">
+                        <button class="calendar-btn " type="button">
                             <i class="fa-regular fa-calendar calendar-icon"></i>
                         </button>
                         <input type="date" class="native-date hidden">
                     </div>
 
                     <div class="date-btns">
-                        <button class="date-btn submit-btn" type="button">Pokaż</button>
+                        <button class="date-btn submit-btn primary" type="button">Pokaż</button>
                         <button class="date-btn clear-btn" type="button">Wyczyść wszystko</button>
                     </div>
 

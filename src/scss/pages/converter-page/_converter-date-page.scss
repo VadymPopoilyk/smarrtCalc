@@ -1,0 +1,145 @@
+@use "../../variables" as *;
+@use "../../mixins.scss" as *;
+
+
+.date-input {
+    @include flex-center;
+    @include shadow-default;
+
+    background-color: $grey-color;
+
+    width: 330px;
+    height: 60px;
+    padding: 10px 12px;
+    margin: 20px;
+    gap: 12px;
+
+    border-radius: 12px;
+
+    box-sizing: border-box;
+
+    transition: 0.5s;
+
+    .label {
+        color: $white-color;
+
+        width: 35px;
+
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .date-part {
+        background: transparent;
+        color: $white-color;
+
+        width: 35px;
+
+        font-size: 22px;
+        font-weight: 600;
+
+        border: none;
+        text-align: center;
+
+        &.year {
+            width: 60px;
+        }
+
+        &::placeholder {
+            color: $light-grey-color;
+            font-weight: 400;
+        }
+    }
+
+    .slash {
+        color: $white-color;
+        font-size: 22px;
+        margin: 0 6px;
+        user-select: none;
+    }
+
+    .calendar-btn {
+        @include flex-center;
+        @include shadow-default;
+
+        background: $light-grey-color;
+        width: 44px;
+        height: 44px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+            background: $light-black-color;
+        }
+    }
+
+    .calendar-icon {
+        color: $white-color;
+        font-size: 20px;
+    }
+}
+
+.date-btns {
+    @include flex-center;
+    gap: 30px;
+
+    .date-btn {
+        @include button-base;
+        @include shadow-default;
+
+        background-color: $grey-color;
+        color: $white-color;
+
+        width: 150px;
+        height: 50px;
+
+        font-size: 15px;
+
+        &:hover {
+            background: $light-black-color;
+        }
+    }
+}
+
+.date-outputs {
+    .output-div {
+        @include flex-center;
+        @include shadow-default;
+        margin: 20px;
+
+        .label {
+            @include flex-center;
+
+            background-color: $grey-color;
+            color: $white-color;
+
+            width: 60px;
+            height: 60px;
+
+            font-size: 25px;
+            font-weight: bold;
+
+            border-radius: 5px 0 0 5px;
+        }
+
+        .output {
+            @include input-base;
+
+            background-color: $light-grey-color;
+
+            width: 270px;
+            height: 60px;
+            padding: 20px;
+
+            font-size: 25px;
+            font-weight: bold;
+
+            text-align: right;
+
+            border-radius: 0 5px 5px 0;
+        }
+    }
+
+}

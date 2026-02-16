@@ -29,7 +29,7 @@ export function initCalculatorMode() {
 
 //converter-page nav
 
-export function converterNav() {
+export function initConverterNav() {
   const buttons = document.querySelectorAll('.converter-btn');
   const sections = document.querySelectorAll('.converter-section');
 
@@ -63,9 +63,9 @@ export function initNavigation() {
 
   document.querySelectorAll('[data-link]').forEach(link => {
     if (link.dataset.link === page) {
-      link.classList.add('active');
+      link.classList.add('active-nav-item');
     } else {
-      link.classList.remove('active');
+      link.classList.remove('active-nav-item');
     }
   });
 }

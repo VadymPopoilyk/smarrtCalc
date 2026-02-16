@@ -1,35 +1,44 @@
 @use "variables" as *;
+@use "mixins" as *;
 
-.site-footer{
-    width: 390px;
-    height: 95px;
+.site-footer {
     background-color: $very-dark-color;
 
-    .bottom-nav{
+    width: 390px;
+    height: 95px;
+
+    .bottom-nav {
         display: flex;
         flex-direction: row;
-        a{
-            width: 130px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+
+        a {
+            @include flex-center;
+
             background-color: $very-dark-color;
             color: $white-color;
+
+            width: 130px;
+            height: 70px;
+
             font-size: 30px;
+
+            flex-direction: column;
             text-decoration: none;
-            transition: 0.3s;
+
+            transition: 0.2s;
+
+            &:hover {
+                background-color: $light-black-color;
+            }
         }
-        a:hover{
-            background-color: $light-black-color;
-        }
+
         p{
             font-size: 15px;
             margin: 5px 0 0 0;
         }
-        .active{
-                color: $orange-color;
+
+        .active-nav-item {
+            color: $orange-color;
         }
     }
 

@@ -1,151 +1,139 @@
 @use "../variables" as *;
+@use "../mixins" as *;
 
-.container{
-    h2{
-        color: $white-color;
-        text-align: center;
-    }
+.function-main-div {
+    width: 100%;
 
-    .form-container{
-        display: flex;
-        align-items: stretch;
-        margin: 0 auto;
-        width: fit-content;
-        margin-bottom: 12px;
-        font-size: 18px;
-    }
-    label{
-        background-color: $light-black-color;
-        color: $white-color;
-        padding: 15px;
-        border-radius: 5px 0 0 5px;
-    }
-    input{
-        text-align: right;
-        border: none;
-        background-color: $grey-color;
-        color: $white-color;
-        padding: 8px;
-        width: 270px;
-        height: 35px;
-        border-radius: 0 5px 5px 0;
-        font-size: 18px;
-    }
+    //inputs
 
-    #calculate, .clear-btn{
-        display: flex;
-        margin: 0 auto;
+    h2 {
+        @include flex-center;
         color: $white-color;
-        background-color: $grey-color;
-        cursor: pointer;
-        border: none;
-        padding: 15px;
-        border-radius: 5px;
-        font-size: 18px;
         margin-bottom: 20px;
-        transition: 0.3s;
     }
 
-    #calculate:hover, .clear-btn:hover{
-        background-color: $light-black-color;
-    }
-    #calculate{
-        padding-left: 40px;
-        width: 150px;
-        height: 50px;
-        font-size: 18px;
-    }
-    
-
-    .delta-result{
-        display: none;
-        margin: auto;
-        width: fit-content;
-        align-items: stretch;
-        color: $white-color;
-        margin-bottom: 10px;
-        
-        #delta-input{
-            width: 50px;
-            background-color: $light-grey-color;
-        }
-    }
-
-     .form-result-x-less-zero{
-        margin: 0 auto;
-        width: fit-content;
-        margin-top: 50px;
-        display: none;
-        background-color: $red-color;
-        color: $white-color;
-        border-radius: 5px 5px 5px 5px;
-        font-size: 18px;
-    }
-
-     .lessZero{
-        background-color: $red-color;
-        color: $white-color;
-        border-radius: 5px;
-     }
-
-    .form-result-x0{
-        display: flex;
-        align-items: stretch;
-        margin: 0 auto;
-        width: fit-content;
-        margin-bottom: 20px;
-        display: none;
-        font-size: 18px;
-    }
-    #zero{
-        border: none;
-        background-color: $light-grey-color;
-        color: $white-color;
-        padding: 8px;
-        width: 270px;
-        height: 35px;
-        border-radius: 0 5px 5px 0;
-    }
-
-    .form-result-x1{
-        display: flex;
-        align-items: stretch;
-        margin: 0 auto;
-        width: fit-content;
-        margin-bottom: 12px;
-        font-size: 18px;
-    }
-    #one{
-        border: none;
-        background-color: $light-grey-color;
-        color: $white-color;
-        padding: 8px;
-        width: 270px;
-        height: 35px;
-        border-radius: 0 5px 5px 0;
-    }
-
-    .form-result-x2{
-        display: flex;
-        align-items: stretch;
-        margin: 0 auto;
-        width: fit-content;
-        margin-bottom: 20px;
-        font-size: 18px;
-    }
-    #two{
-        border: none;
-        background-color: $light-grey-color;
-        color: $white-color;
-        padding: 8px;
-        width: 270px;
-        height: 35px;
-        border-radius: 0 5px 5px 0;
-    }
-    .form-result-x1-x2{
-        display: none;
+    .function-inputs {
+        @include flex-center;
         flex-direction: column;
     }
 
-}
+    .form-container {
+        @include flex-center;
+        margin-bottom: 15px;
+        width: fit-content;
 
+        &:last-child{
+            margin-bottom: 0
+        }
+
+        label {
+            @include flex-center;
+
+            background-color: $light-black-color;
+            color: $white-color;
+
+            width: 60px;
+            height: 60px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            border-radius: 5px 0 0 5px;
+        }
+
+        input {
+            @include input-base;
+
+            background-color: $grey-color;
+
+            width: 270px;
+            height: 60px;
+            padding: 10px;
+
+            font-size: 20px;
+
+            border-radius: 0 5px 5px 0;
+
+            text-align: right;
+        }
+    }
+
+    //buttons
+
+    .function-btns {
+        @include flex-center;
+
+        .button {
+            @include button-base;
+
+            background-color: $grey-color;
+            color: $white-color;
+
+            width: 150px;
+            height: 50px;
+            margin: 15px 10px;
+
+            flex-direction: row;
+        }
+    }
+
+    // results
+
+    .results {
+        margin-top: 30px;
+
+        .result-block {
+            @include flex-center;
+
+            display: flex;
+
+            margin: 10px auto;
+            width: fit-content;
+
+            font-size: 18px;
+
+            label {
+                @include flex-center;
+                width: 60px;
+                height: 50px;
+                font-weight: bold;
+
+                background-color: $light-black-color;
+                color: $white-color;
+
+                border-radius: 5px 0 0 5px;
+            }
+        }
+
+        .delta-result .result-input {
+            width: 100px;
+        }
+
+        /* input для результатів */
+        .result-input {
+            @include input-base;
+            width: 270px;
+            height: 50px;
+            padding: 8px;
+
+            background-color: $light-grey-color;
+            color: $white-color;
+
+            border-radius: 0 5px 5px 0;
+            text-align: right;
+        }
+
+        .result-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .result-error {
+            label {
+                background-color: $red-color;
+                border-radius: 5px;
+            }
+        }
+    }
+}

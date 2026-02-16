@@ -1,14 +1,14 @@
 import { validateBlock, validateRange, parseBlock, diffDates } from './converter-date-validator.js';
 
-const dayOutput = document.querySelector('.output.day');
-const monthOutput = document.querySelector('.output.month');
-const yearOutput = document.querySelector('.output.year');
+export function initConverterDate() {
+  const dayOutput = document.querySelector('.output.day');
+  const monthOutput = document.querySelector('.output.month');
+  const yearOutput = document.querySelector('.output.year');
 
-const submitBtn = document.querySelector('.submit-btn');
-const clearBtn = document.querySelector('.clear-btn');
+  const submitBtn = document.querySelector('.submit-btn');
+  const clearBtn = document.querySelector('.clear-btn');
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (!submitBtn) return; 
+  if (!submitBtn) return;
   document.querySelectorAll('.date-part').forEach(input => {
     input.addEventListener('input', () => {
       // only numbers
@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
       monthInput.value = month;
       yearInput.value = year;
 
-      block.querySelectorAll('.date-error').forEach(el => {
-        el.classList.remove('date-error');
+      block.querySelectorAll('.text-error').forEach(el => {
+        el.classList.remove('text-error');
       });
     });
   });
@@ -61,10 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
       dayInput.value = '';
       monthInput.value = '';
       yearInput.value = '';
-      block.classList.remove('error');
+      block.classList.remove('box-error');
 
-      block.querySelectorAll('.date-error').forEach(el => {
-        el.classList.remove('date-error');
+      block.querySelectorAll('.text-error').forEach(el => {
+        el.classList.remove('text-error');
       });
     });
 
@@ -108,12 +108,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const tillDate = parseBlock(tillBlock);
 
     if (!fromDate || !tillDate) {
-      !fromDate && fromBlock.classList.add('error');
-      !tillDate && tillBlock.classList.add('error');
+      !fromDate && fromBlock.classList.add('box-error');
+      !tillDate && tillBlock.classList.add('box-error');
       return;
     }
 
-    [fromBlock, tillBlock].forEach(b => b.classList.remove('error'));
+    [fromBlock, tillBlock].forEach(b => b.classList.remove('box-error'));
 
     const diff = diffDates(fromDate, tillDate);
 
@@ -122,8 +122,4 @@ document.addEventListener("DOMContentLoaded", function () {
     dayOutput.value = diff.days;
   });
 
-});
-
-
-
-
+}
