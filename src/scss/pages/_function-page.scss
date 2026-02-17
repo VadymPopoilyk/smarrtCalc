@@ -19,6 +19,7 @@
 
     .form-container {
         @include flex-center;
+        @include shadow-default;
         margin-bottom: 15px;
         width: fit-content;
 
@@ -65,6 +66,7 @@
 
         .button {
             @include button-base;
+            @include shadow-default;
 
             background-color: $grey-color;
             color: $white-color;
@@ -84,6 +86,7 @@
 
         .result-block {
             @include flex-center;
+            @include shadow-default;
 
             display: flex;
 

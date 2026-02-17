@@ -18,7 +18,13 @@ import './calculator-page/events.js';
 import './calculator-page/normalizer.js';
 
 //converter-page
-import './converter-page/converter-length/converter-length.js';
+import './converter-page/converter-mass/converter-mass-main.js';
+
+import './converter-page/converter-memory/converter-memory-main.js';
+
+import './converter-page/converter-length/converter-length-main.js';
+
+import './converter-page/converter-currency/converter-currency-main.js';
 
 import './converter-page/converter-date/converter-date-main.js';
 import './converter-page/converter-date/converter-date-validator.js';
@@ -31,7 +37,7 @@ import { initConverterNav } from './navigations.js';
 import { initCalculatorMode } from './navigations.js';
 
 import {initFunctionPage} from './function-page/function-page-main.js';
-import {initConverterLength} from './converter-page/converter-length/converter-length.js';
+
 import {initConverterDate} from './converter-page/converter-date/converter-date-main.js';
 
 async function initApp() {
@@ -44,7 +50,6 @@ async function initApp() {
 
   initFunctionPage();
 
-  initConverterLength();
   initConverterDate();
 }
 

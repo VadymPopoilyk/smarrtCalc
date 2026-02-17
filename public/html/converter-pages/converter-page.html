@@ -20,25 +20,46 @@
             <section class="converters">
                 <section class="converter-section converter-length" data-section="length">
                     <div class="field box-shadow-animation">
-                        <select id="from_unit"></select>
-                        <input type="text" id="number_start" class="numbers converter" placeholder="..." autocomplete="off" inputmode="numeric">
+                        <select id="length_from"></select>
+                        <input type="text" id="length_start" class="converter-number-input" placeholder="..." autocomplete="off" inputmode="numeric">
                     </div>
                     <div class="field">
-                        <select id="to_unit"></select>
-                        <input type="text" id="number_end" class="numbers" disabled>
+                        <select id="length_to"></select>
+                        <input type="text" id="length_end" disabled>
                     </div>
                 </section>
 
                 <section class="converter-section converter-mass hidden" data-section="mass">
-                    masa
+                    <div class="field box-shadow-animation">
+                        <select id="mass_from"></select>
+                        <input type="text" id="mass_start" class="converter-number-input" placeholder="..." autocomplete="off" inputmode="numeric">
+                    </div>
+                    <div class="field">
+                        <select id="mass_to"></select>
+                        <input type="text" id="mass_end" disabled>
+                    </div>
                 </section>
 
                 <section class="converter-section converter-memory hidden" data-section="memory">
-                    pamieć
+                    <div class="field box-shadow-animation">
+                        <select id="memory_from"></select>
+                        <input type="text" id="memory_start" class="converter-number-input" placeholder="..." autocomplete="off" inputmode="numeric">
+                    </div>
+                    <div class="field">
+                        <select id="memory_to"></select>
+                        <input type="text" id="memory_end" disabled>
+                    </div>
                 </section>
 
                 <section class="converter-section converter-currency hidden" data-section="currency">
-                    waluta
+                    <div class="field box-shadow-animation">
+                        <select id="currency_from"></select>
+                        <input type="text" id="currency_start" class="converter-number-input" placeholder="..." autocomplete="off" inputmode="numeric">
+                    </div>
+                    <div class="field">
+                        <select id="currency_to"></select>
+                        <input type="text" id="currency_end" disabled>
+                    </div>
                 </section>
 
                 <section class="converter-section converter-date hidden" data-section="date">

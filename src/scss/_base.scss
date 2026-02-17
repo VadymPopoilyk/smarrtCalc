@@ -12,7 +12,7 @@ body {
   font-family: "Roboto", sans-serif;
 
   animation: opacity 0.5s;
-
+  
   .phone-screen {
     background-color: $white-color;
 
@@ -32,6 +32,7 @@ body {
   }
 }
 
+
 .active, .primary {
   background-color: $orange-color !important;
 
@@ -39,6 +40,7 @@ body {
     background-color: $dark-orange-color !important;
   }
 }
+
 
 .hidden {
   display: none !important;
