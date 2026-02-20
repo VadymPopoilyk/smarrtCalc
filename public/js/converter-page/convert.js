@@ -8,7 +8,7 @@ export function convert(value, fromUnit, toUnit, factors, precision = 6, isCurre
     let result = 0;
 
     if(isCurrency === true){
-        result = (numericValue * factors[fromUnit]) * factors[toUnit];
+        result = (numericValue / factors[fromUnit]) * factors[toUnit];
     }else{
         result = (numericValue * factors[fromUnit]) / factors[toUnit];
     }
