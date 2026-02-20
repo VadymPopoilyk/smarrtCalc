@@ -4,8 +4,9 @@
 .site-footer {
     background-color: $very-dark-color;
 
-    width: 390px;
     height: 95px;
+
+    flex-shrink: 0;
 
     .bottom-nav {
         display: flex;

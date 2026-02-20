@@ -31,7 +31,7 @@
       background-color: $grey-color;
 
       height: 60px;
-      width: 250px;
+      width: 100%;
       padding: 20px;
       font-size: 28px;
 
@@ -52,6 +52,11 @@
   margin: 20px auto 20px;
 
   grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 330px) {
+    display: flex;
+    overflow-x: auto;
+  }
 
   button {
     @include button-base;

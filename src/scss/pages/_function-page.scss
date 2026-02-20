@@ -47,7 +47,8 @@
 
             background-color: $grey-color;
 
-            width: 270px;
+            max-width: 270px;
+            width: 100%;
             height: 60px;
             padding: 10px;
 
@@ -71,7 +72,8 @@
             background-color: $grey-color;
             color: $white-color;
 
-            width: 150px;
+            max-width: 150px;
+            width: 100%;
             height: 50px;
             margin: 15px 10px;
 
@@ -112,12 +114,14 @@
             width: 100px;
         }
 
-        /* input для результатів */
         .result-input {
             @include input-base;
-            width: 270px;
+            width: 100%;
             height: 50px;
             padding: 8px;
+            
+            font-size: 18px;
+            font-weight: bold;
 
             background-color: $light-grey-color;
             color: $white-color;
@@ -129,7 +133,6 @@
         .result-group {
             display: flex;
             flex-direction: column;
-            gap: 10px;
         }
 
         .result-error {

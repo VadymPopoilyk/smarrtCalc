@@ -5,7 +5,11 @@
 body {
   @include flex-center;
 
+  height: 100%;
   margin: 0;
+
+  flex: 1;
+  overflow-y: auto;
 
   background-color: $black-color;
 
@@ -16,9 +20,16 @@ body {
   .phone-screen {
     background-color: $white-color;
 
-    width: 390px;
-    height: 844px;
+    display: flex;
+    flex-direction: column;
 
+    width: 100%;
+    max-width: 390px;
+
+    max-height: 844px;
+    height: 100dvh;
+
+    margin: 0 auto;
     main {
       background-color: $dark-grey-color;
 
@@ -26,7 +37,6 @@ body {
 
       overflow-y: auto;
 
-      width: 100%;
       height: 630px;
     }
   }
