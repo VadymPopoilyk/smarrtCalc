@@ -86,7 +86,6 @@
 
 .date-btns {
     @include flex-center;
-    margin: 15px;
 
     .date-btn {
         @include button-base;
@@ -97,6 +96,7 @@
 
         width: 100%;
         max-width: 150px;
+        margin: 10px 15px;
 
         height: 50px;
 
@@ -112,7 +112,7 @@
     .output-div {
         @include flex-center;
         @include shadow-default;
-        margin: 20px;
+        margin: 10px;
 
         .label {
             @include flex-center;
@@ -146,6 +146,36 @@
             text-align: right;
 
             border-radius: 0 5px 5px 0;
+        }
+    }
+
+}
+
+@media (max-width: 330px) {
+    .date-input {
+        margin: 5px;
+        padding: 5px;
+
+        .slash {
+            margin: 0;
+        }
+
+        .date-part {
+            font-size: 15px;
+
+            &.year {
+                max-width: 40px;
+            }
+        }
+
+        .label {
+            font-size: 18px;
+        }
+    }
+
+    .date-btns {
+        .date-btn {
+            width: 100px;
         }
     }
 

@@ -3,6 +3,7 @@ console.log("JS works");
 //main
 import './partials.js';
 import './navigations.js';
+import './zoom.js';
 
 //function-page
 import './function-page/function-page-main.js';
