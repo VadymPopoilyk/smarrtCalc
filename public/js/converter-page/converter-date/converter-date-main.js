@@ -18,7 +18,6 @@ export function initConverterDate() {
   document.querySelectorAll('.date-input').forEach(block => {
 
     const nativeInput = block.querySelector('.native-date');
-    const calendarBtn = block.querySelector('.calendar-btn');
 
     const dayInput = block.querySelector('.day');
     const monthInput = block.querySelector('.month');
@@ -26,14 +25,6 @@ export function initConverterDate() {
 
 
     // date picker btn
-    calendarBtn.addEventListener('click', () => {
-      if (nativeInput.showPicker) {
-        nativeInput.showPicker();   // Chrome
-      } else {
-        nativeInput.click();        // fallback
-      }
-    });
-
     nativeInput.addEventListener('change', () => {
       if (!nativeInput.value) return;
 
