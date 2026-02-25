@@ -18,7 +18,7 @@ export function initConverter(config) {
 
 
     if (!inputStartId) return;
-        
+
     const inputStart = document.getElementById(inputStartId);
     const textEnd = document.getElementById(textEndId)
     const selectFrom = document.getElementById(selectFromId);
@@ -48,7 +48,7 @@ export function initConverter(config) {
             precision,
             isCurrency,
         );
-            textEnd.textContent = result;
+        textEnd.textContent = result;
     }
 
     inputStart.addEventListener("input", handleConvert);
