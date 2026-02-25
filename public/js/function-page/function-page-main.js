@@ -28,23 +28,22 @@ export function initFunctionPage() {
     if (!aInput) return;
 
     const deltaBlock = document.querySelector('.delta-result');
-    const deltaInput = deltaBlock.querySelector('.result-input');
+    const deltaInput = deltaBlock.querySelector('.delta-result-container .delta-result');
 
     const resultError = document.querySelector('.result-error');
     const x0Block = document.querySelector('.x0');
     const x1Block = document.querySelector('.x1');
     const x2Block = document.querySelector('.x2');
 
-    const x0Input = x0Block.querySelector('.result-input');
-    const x1Input = x1Block.querySelector('.result-input');
-    const x2Input = x2Block.querySelector('.result-input');
+    const x0Input = x0Block.querySelector('.function-result-container .result-input');
+    const x1Input = x1Block.querySelector('.function-result-container .result-input');
+    const x2Input = x2Block.querySelector('.function-result-container .result-input');
 
     const calculateBtn = document.querySelector('.submit');
     const clearBtn = document.querySelector('.clear-btn');
 
     function hideAll() {
         deltaBlock.classList.add('hidden');
-        resultError.classList.add('hidden');
         x0Block.classList.add('hidden');
         x1Block.classList.add('hidden');
         x2Block.classList.add('hidden');
@@ -57,6 +56,7 @@ export function initFunctionPage() {
     function clearErrors() {
         document.querySelectorAll('.form-container')
             .forEach(el => el.classList.remove('box-error'));
+        deltaBlock.classList.remove('box-error');
     }
 
     function clearAll() {
@@ -96,23 +96,23 @@ export function initFunctionPage() {
             Number(c)
         );
 
-        deltaInput.value = result.delta.toFixed(2);
+        deltaInput.textContent = result.delta.toFixed(2);
         deltaBlock.classList.remove('hidden');
 
         if (result.type === 'no-roots') {
-            resultError.classList.remove('hidden');
+            deltaBlock.classList.add('box-error');
             return;
         }
 
         if (result.type === 'one-root') {
-            x0Input.value = result.x0.toFixed(2);
+            x0Input.textContent = result.x0.toFixed(2);
             x0Block.classList.remove('hidden');
             return;
         }
 
         if (result.type === 'two-roots') {
-            x1Input.value = result.x1.toFixed(2);
-            x2Input.value = result.x2.toFixed(2);
+            x1Input.textContent = result.x1.toFixed(2);
+            x2Input.textContent = result.x2.toFixed(2);
             x1Block.classList.remove('hidden');
             x2Block.classList.remove('hidden');
         }

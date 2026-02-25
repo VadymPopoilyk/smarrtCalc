@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>SmarrtCalc-kalkulator</title>
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,17 +23,20 @@
                 <div class="function-inputs">
                     <div class="form-container box-shadow-animation">
                         <label for="a">a</label>
-                        <input type="text" id="a" class="numbers function" placeholder="podaj a" autocomplete="off" inputmode="numeric">
+                        <input type="text" id="a" class="numbers function" placeholder="podaj a" autocomplete="off"
+                            inputmode="numeric">
                     </div>
 
                     <div class="form-container box-shadow-animation">
                         <label for="b">b</label>
-                        <input type="text" id="b" class="numbers function" placeholder="podaj b" autocomplete="off" inputmode="numeric">
+                        <input type="text" id="b" class="numbers function" placeholder="podaj b" autocomplete="off"
+                            inputmode="numeric">
                     </div>
 
                     <div class="form-container box-shadow-animation">
                         <label for="c">c</label>
-                        <input type="text" id="c" class="numbers function" placeholder="podaj c" autocomplete="off" inputmode="numeric">
+                        <input type="text" id="c" class="numbers function" placeholder="podaj c" autocomplete="off"
+                            inputmode="numeric">
                     </div>
                 </div>
 
@@ -41,31 +44,35 @@
                     <button class="button clear-btn">Wyczyść Wszystko</button>
                     <button class="button primary submit">Obliczyć</button>
                 </div>
-                
+
                 <div class="results">
                     <section class="result-block delta-result hidden">
                         <label>Δ</label>
-                        <input type="text" class="result-input" disabled>
-                    </section>
-
-                    <section class="result-block result-error hidden">
-                        <label class="lessZero">Δ < 0</label>
+                        <div class="delta-result-container">
+                            <p class="delta-result"></p>
+                        </div>
                     </section>
 
                     <section class="result-block x0 hidden">
                         <label>x₀</label>
-                        <input type="text" class="result-input" disabled>
+                        <div class="function-result-container">
+                            <p class="result-input"></p>
+                        </div>
                     </section>
 
                     <section class="result-group x1-x2">
                         <div class="result-block x1 hidden">
                             <label>x₁</label>
-                            <input type="text" class="result-input" disabled>
+                            <div class="function-result-container">
+                                <p class="result-input"></p>
+                            </div>
                         </div>
 
                         <div class="result-block x2 hidden">
                             <label>x₂</label>
-                            <input type="text" class="result-input" disabled>
+                            <div class="function-result-container">
+                                <p class="result-input"></p>
+                            </div>
                         </div>
                     </section>
 

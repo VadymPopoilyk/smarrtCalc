@@ -2,7 +2,7 @@ import { initConverter } from "../converter-main.js";
 
 initConverter({
     inputStartId: "memory_start",
-    inputEndId: "memory_end",
+    textEndId: "memory_end",
     selectFromId: "memory_from",
     selectToId: "memory_to",
 

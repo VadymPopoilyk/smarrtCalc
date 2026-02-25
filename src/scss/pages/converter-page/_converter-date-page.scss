@@ -1,14 +1,13 @@
 @use "../../variables" as *;
 @use "../../mixins.scss" as *;
 
-
 .date-input {
     @include flex-center;
     @include shadow-default;
 
     background-color: $grey-color;
 
-    max-width: 330px;
+    max-width: 330px !important;
 
     height: 100%;
     max-height: 200px;
@@ -180,7 +179,7 @@
 
 }
 
-@media (max-width: 330px) {
+@media (max-width: 450px) {
     .date-input {
         margin: 5px;
         padding: 5px;

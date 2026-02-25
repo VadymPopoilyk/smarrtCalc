@@ -16,7 +16,7 @@ import { initConverter } from "../converter-main.js";
 
         initConverter({
             inputStartId: "currency_start",
-            inputEndId: "currency_end",
+            textEndId: "currency_end",
             selectFromId: "currency_from",
             selectToId: "currency_to",
 

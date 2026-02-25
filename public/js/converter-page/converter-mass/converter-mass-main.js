@@ -2,7 +2,7 @@ import { initConverter } from "../converter-main.js";
 
 initConverter({
     inputStartId: "mass_start",
-    inputEndId: "mass_end",
+    textEndId: "mass_end",
     selectFromId: "mass_from",
     selectToId: "mass_to",
 

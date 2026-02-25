@@ -2,7 +2,7 @@ import { initConverter } from "../converter-main.js";
 
 initConverter({
     inputStartId: "length_start",
-    inputEndId: "length_end",
+    textEndId: "length_end",
     selectFromId: "length_from",
     selectToId: "length_to",
 

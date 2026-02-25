@@ -5,7 +5,7 @@ export function initConverter(config) {
     if (!config) return;
     const {
         inputStartId,
-        inputEndId,
+        textEndId,
         selectFromId,
         selectToId,
         units,
@@ -20,11 +20,11 @@ export function initConverter(config) {
     if (!inputStartId) return;
         
     const inputStart = document.getElementById(inputStartId);
-    const inputEnd = document.getElementById(inputEndId);
+    const textEnd = document.getElementById(textEndId)
     const selectFrom = document.getElementById(selectFromId);
     const selectTo = document.getElementById(selectToId);
 
-    if (!inputStart || !inputEnd || !selectFrom || !selectTo) return;
+    if (!inputStart || !selectFrom || !selectTo || !textEnd) return;
 
     converterInputValidator();
 
@@ -48,7 +48,7 @@ export function initConverter(config) {
             precision,
             isCurrency,
         );
-            inputEnd.value = result;
+            textEnd.textContent = result;
     }
 
     inputStart.addEventListener("input", handleConvert);
