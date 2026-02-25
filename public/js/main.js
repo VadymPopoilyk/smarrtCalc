@@ -15,7 +15,6 @@ import './calculator-page/parser.js';
 import './calculator-page/ui.js';
 import './calculator-page/handlers.js';
 import './calculator-page/events.js';
-import './calculator-page/normalizer.js';
 
 //converter-page
 import './converter-page/converter-mass/converter-mass-main.js';

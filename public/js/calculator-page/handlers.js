@@ -1,9 +1,8 @@
-// Optimized handleInput logic
 import { state } from './state.js';
 import { calculateExpression } from './parser.js';
 import { updateScreen } from './ui.js';
 
-/* ================== HELPERS ================== */
+//helpers
 const OPERATORS = new Set(['+', '-', '*', '/', '^', '%']);
 
 const normalize = v => v
@@ -16,6 +15,10 @@ const normalize = v => v
 const lastChar = () => state.expression?.slice(-1) || '';
 const isLastCharOperator = () => OPERATORS.has(lastChar());
 const isLastCharOpenParen = () => lastChar() === '(';
+
+function isOperator(char) {
+    return ['+', '-', '*', '/'].includes(char);
+}
 
 const getLastNumberOrGroup = expr => expr.match(/(\d+\.?\d*|\([^()]+\))$/);
 
@@ -42,11 +45,11 @@ const safeCalc = expr => {
   catch { return NaN; }
 };
 
-/* ================== CORE ================== */
+//handle input
 export function handleInput(raw) {
   const value = normalize(raw);
 
-  /* ---- NaN lock ---- */
+  //NaN lock
   if (state.expression === 'NaN') {
     if (value === 'AC') {
       state.expression = '';
@@ -55,7 +58,7 @@ export function handleInput(raw) {
     return;
   }
 
-  /* ---- AC ---- */
+  //AC
   if (value === 'AC') {
     Object.assign(state, {
       expression: '',
@@ -66,7 +69,7 @@ export function handleInput(raw) {
     return;
   }
 
-  /* ---- DOT ---- */
+  //DOT
   if (value === '.') {
     if (!state.expression) return;
     if (isLastCharOperator() || isLastCharOpenParen()) return;
@@ -76,7 +79,7 @@ export function handleInput(raw) {
     return;
   }
 
-  /* ---- POWER MODE (=) ---- */
+  //POWER MODE (=)
   if (value === '=' && state.powerMode) {
     const exp = parseFloat(state.expression || '0');
     state.expression = Math.pow(state.baseValue, exp).toString();
@@ -88,7 +91,7 @@ export function handleInput(raw) {
 
   if (state.powerMode && OPERATORS.has(value) && value !== '=') return;
 
-  /* ---- EQUAL ---- */
+  //EQUAL
   if (value === '=') {
     if (!isLastCharOperator()) {
       const res = safeCalc(state.expression);
@@ -98,7 +101,7 @@ export function handleInput(raw) {
     return;
   }
 
-  /* ---- +/- ---- */
+  //+/-
   if (value === '+/-') {
     if (!state.expression) {
       state.expression = '0-';
@@ -121,7 +124,7 @@ export function handleInput(raw) {
     return;
   }
 
-  /* ---- % ---- */
+  //%
   if (value === '%') {
     if (!canApplyPercent()) return;
 
@@ -148,7 +151,7 @@ export function handleInput(raw) {
     return;
   }
 
-  /* ---- POWERS ---- */
+  //POWERS
   if (value === 'x²' || value === 'x³') {
     const pow = value === 'x²' ? 2 : 3;
     const m = getLastNumberOrGroup(state.expression);
@@ -160,7 +163,7 @@ export function handleInput(raw) {
     return;
   }
 
-  /* ---- x^n ---- */
+  //x^n
   if (value === 'xⁿ') {
     const m = getLastNumberOrGroup(state.expression);
     if (!m) return;
@@ -173,7 +176,7 @@ export function handleInput(raw) {
     return;
   }
 
-  /* ---- LOG ---- */
+  //LOG
   if (value === 'log') {
     const m = getLastNumberOrGroup(state.expression);
     if (!m) return;
@@ -190,7 +193,7 @@ export function handleInput(raw) {
     return;
   }
 
-  /* ---- SQRT ---- */
+  //SQRT
   if (value === 'sqrt') {
     const expr = state.expression.trim();
     if (!isPureNumber(expr)) return;
@@ -203,7 +206,7 @@ export function handleInput(raw) {
     return;
   }
 
-  /* ---- CBRT ---- */
+  //CBRT
   if (value === 'cbrt') {
     const expr = state.expression.trim();
     if (!isPureNumber(expr)) {
@@ -224,12 +227,36 @@ export function handleInput(raw) {
     return;
   }
 
-  /* ---- OPERATORS ---- */
-  if (OPERATORS.has(value)) {
-    if (!state.expression || isLastCharOperator() || isLastCharOpenParen()) return;
-  }
+  //OPERATORS
+  if (['+', '-', '*', '/'].includes(value)) {
+    if (!state.expression) return;
 
-  /* ---- DEFAULT ---- */
+    const expr = state.expression;
+    const lastChar = expr.slice(-1);
+    const prevChar = expr.slice(-2, -1);
+
+    // 🔹 якщо останній символ оператор
+    if (isOperator(lastChar)) {
+        // ❗ якщо це випадок типу 5*-  (унарний мінус)
+        if (lastChar === '-' && isOperator(prevChar)) {
+            // замінюємо тільки мінус
+            state.expression = expr.slice(0, -1) + value;
+        } else {
+            // звичайна заміна оператора
+            state.expression = expr.slice(0, -1) + value;
+        }
+
+        updateScreen();
+        return;
+    }
+
+    // якщо все ок — просто додаємо оператор
+    state.expression += value;
+    updateScreen();
+    return;
+}
+
+  //DEFAULT
   state.expression += value;
   updateScreen();
 }
