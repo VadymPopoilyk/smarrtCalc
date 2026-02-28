@@ -1,5 +1,38 @@
-Licencja niestandardowa – Kalkulator z funkcjami rozszerzonymi
+Custom Non-Commercial License – SmarrtCalc
 Copyright (c) 2026 Matrix Corporation
+
+====================================================
+ENGLISH VERSION
+====================================================
+
+1. Author
+The author of this software is Matrix Corporation(c).
+
+2. Permitted Use
+Permission is granted to:
+- download and view the source code,
+- modify the code for private use,
+- redistribute copies provided that proper credit is given to the original author.
+
+3. Restrictions
+It is strictly prohibited to:
+- use this software for commercial purposes,
+- sell the software in whole or in part,
+- publish the software without proper attribution,
+- claim authorship of the project.
+
+4. Disclaimer
+The software is provided "as is", without warranty of any kind.
+
+5. Legal Protection
+In case of violation of this license, the author reserves the right
+to pursue legal action.
+
+All rights not expressly granted herein are reserved by the author.
+
+====================================================
+POLSKA WERSJA
+====================================================
 
 1. Autor
 Autorem niniejszego oprogramowania jest Matrix Corporation(c).
@@ -20,6 +53,7 @@ Bezwzględnie zabrania się:
 4. Brak gwarancji
 Oprogramowanie jest dostarczane „tak jak jest”, bez jakiejkolwiek gwarancji.
 
-5. W przypadku naruszenia warunków licencji autor zastrzega sobie prawo do dochodzenia roszczeń prawnych.
+5. Ochrona prawna
+W przypadku naruszenia warunków licencji autor zastrzega sobie prawo do dochodzenia roszczeń prawnych.
 
 Wszelkie prawa nieudzielone w niniejszej licencji pozostają przy autorze.
