@@ -1,0 +1,25 @@
+Licencja niestandardowa – Kalkulator z funkcjami rozszerzonymi
+Copyright (c) 2026 Matrix Corporation
+
+1. Autor
+Autorem niniejszego oprogramowania jest Matrix Corporation(c).
+
+2. Dozwolone użycie
+Zezwala się na:
+- pobieranie i przeglądanie kodu źródłowego,
+- modyfikowanie kodu do użytku prywatnego,
+- udostępnianie kopii z zachowaniem informacji o autorze.
+
+3. Zakazy
+Bezwzględnie zabrania się:
+- wykorzystywania oprogramowania w celach komercyjnych,
+- sprzedaży oprogramowania w całości lub części,
+- publikowania oprogramowania bez wskazania oryginalnego autora,
+- przypisywania sobie autorstwa projektu.
+
+4. Brak gwarancji
+Oprogramowanie jest dostarczane „tak jak jest”, bez jakiejkolwiek gwarancji.
+
+5. W przypadku naruszenia warunków licencji autor zastrzega sobie prawo do dochodzenia roszczeń prawnych.
+
+Wszelkie prawa nieudzielone w niniejszej licencji pozostają przy autorze.
